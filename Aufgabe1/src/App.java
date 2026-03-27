@@ -31,6 +31,8 @@ public class App {
         julian.sprechstundenAnfrage(nestler, "29.03.2026", "13:00");
         nestler.feedback(julian);
 
+        swe2.details();
+
 
 
 

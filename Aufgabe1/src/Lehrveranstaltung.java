@@ -6,6 +6,11 @@ public class Lehrveranstaltung {
 	private Vorlesungsstunde [] vorlesungsstunden = new Vorlesungsstunde [24];
 	private Praktikumsstunde [] praktikumsstunden = new Praktikumsstunde [24];
 	
+    public Lehrveranstaltung(String titel, Dozierender[] dozierende){
+            this.titel = titel;
+            this.dozierende = dozierende;
+        }
+
 	public void addStudierende (Studierender person){
         for (int i = 0; i < studierende.length; i++) {
             if (studierende[i] == null) {}

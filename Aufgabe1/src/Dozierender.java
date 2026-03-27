@@ -3,6 +3,12 @@ public class Dozierender {
     private String name;
 	private String fakultaet;
 	private int bueronummer;
+
+      public Dozierender(String name, String fakulteat, int bueronummer){
+        this.name = name;
+        this.bueronummer = bueronummer;
+        this.fakulteat = fakulteat;
+    }
 	
 	public String getName() {
 		return name;

@@ -12,7 +12,7 @@ public class Lehrveranstaltung {
 
 	public void addStudierende (Studierender person){
         for (int i = 0; i < studierende.length; i++) {
-            if (studierende[i] == null) {}
+            if (studierende[i] == null) {
             	studierende[i] = person;
             	System.out.println ("Du hast dich erfolgreich eingeschrieben");
                 return;
@@ -34,7 +34,7 @@ public class Lehrveranstaltung {
 	
 	public void addDozierender (Dozierender person){
         for (int i = 0; i < dozierende.length; i++) {
-            if (studierende[i] == null) {}
+            if (studierende[i] == null) {
             	dozierende[i] = person;
             	System.out.println ("Du hast dich erfolgreich eingeschrieben");
                 return;

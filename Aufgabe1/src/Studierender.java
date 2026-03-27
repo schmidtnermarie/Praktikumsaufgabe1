@@ -4,12 +4,12 @@ public class Studierender {
 	private String studiengang;
 	private int matrikelnummer;
 
-      public Studierender(String name, int matrikelnummer, String studiengang){
-        this.name = name;
-        this.matrikelnummer = matrikelnummer;
-        this.studiengang = studiengang;
-    }
-	
+	public Studierender(String name, int matrikelnummer, String studiengang){
+		this.name = name;
+		this.matrikelnummer = matrikelnummer;
+		this.studiengang = studiengang;
+	}
+
 	public String getName() {
 		return name;
 	}

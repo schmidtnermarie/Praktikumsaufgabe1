@@ -10,6 +10,12 @@ public class Dozierender {
         this.fakulteat = fakulteat;
     }
 	
+	public Dozierender(String name, String fakulteat, int bueronummer){
+		this.name = name;
+		this.bueronummer = bueronummer;
+		this.fakultaet = fakulteat;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -35,5 +41,13 @@ public class Dozierender {
 	
 	public void praktikumhinzufügen (Lehrveranstaltung lv, Praktikumsstunde ps) {
 		lv.addPraktikumsstunde(ps);
+	}
+
+	public void einschreiben (Lehrveranstaltung lv) {
+		lv.addDozierender(this);
+	}
+	
+	public void auschreiben (Lehrveranstaltung lv) {
+		lv.removeDozierender(this);
 	}
 }

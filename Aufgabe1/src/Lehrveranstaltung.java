@@ -6,14 +6,13 @@ public class Lehrveranstaltung {
 	private Vorlesungsstunde [] vorlesungsstunden = new Vorlesungsstunde [24];
 	private Praktikumsstunde [] praktikumsstunden = new Praktikumsstunde [24];
 	
-    public Lehrveranstaltung(String titel, Dozierender[] dozierende){
-            this.titel = titel;
-            this.dozierende = dozierende;
-        }
+	public Lehrveranstaltung(String titel){
+		this.titel = titel;
+	}
 
 	public void addStudierende (Studierender person){
         for (int i = 0; i < studierende.length; i++) {
-            if (studierende[i] == null) {}
+            if (studierende[i] == null) {
             	studierende[i] = person;
             	System.out.println ("Du hast dich erfolgreich eingeschrieben");
                 return;
@@ -33,6 +32,28 @@ public class Lehrveranstaltung {
         System.out.println ("Der Studierende kann aufgrund fehlender Einschreibung nicht ernfernt werden");
     }
 	
+	public void addDozierender (Dozierender person){
+        for (int i = 0; i < dozierende.length; i++) {
+            if (studierende[i] == null) {
+            	dozierende[i] = person;
+            	System.out.println ("Du hast dich erfolgreich eingeschrieben");
+                return;
+            }
+        }
+        System.out.println ("Die Lehrveranstaltung ist bereits ausgebucht");
+    }
+
+	public void removeDozierender (Dozierender person){
+        for (int i = 0; i < dozierende.length; i++) {
+        	 if (dozierende [i] != null && dozierende[i].equals(person)) {
+            	dozierende[i] = null;
+            	System.out.println ("Du hast dich ausgeschrieben");
+                return;
+            }
+        }
+        System.out.println ("Der Studierende kann aufgrund fehlender Einschreibung nicht ernfernt werden");
+    }
+
 	public void addVorlesungsstunde (Vorlesungsstunde stunde){
 		for (int i = 0; i < vorlesungsstunden.length; i++) {
             if (vorlesungsstunden[i] == null) {
